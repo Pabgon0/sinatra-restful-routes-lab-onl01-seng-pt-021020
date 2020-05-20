@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
   
-  
-
+  get "/recipes" do
+    @recipes = Recipe.all
+  end
 end
